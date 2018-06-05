@@ -18,7 +18,7 @@ var example = map(apple, x => x * 2){
 
 console.log(example);
 
-//this is how map works, it is a built in method.
+//this is how gmap works, it is a built in method.
 var test = apple.map(function(x){
 	return x * 3;
 });
