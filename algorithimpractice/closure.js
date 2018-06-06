@@ -3,8 +3,12 @@
 var happy = 3;
 
 var apple = function(a, b) {
-     happy = 2;
-    console.log(happy);
-    
+ var happy = 2;
+ return function(){
+     happy+=2;
+     console.log(happy)
+ }
 }
-apple();
+apple()();
+apple()();
+//happy = 2 each time. doesn't increment
