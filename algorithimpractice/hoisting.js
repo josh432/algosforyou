@@ -24,7 +24,7 @@ function foo() {
     function zed() { //this function within foo gets hoisted to top of function.
         return 6 + 6; //this line just disappears. doing nothing with it.
     }
-    return 2 + 2;
+    return 2 + 2; 
 }
 
 
