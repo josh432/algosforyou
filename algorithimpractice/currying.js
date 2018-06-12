@@ -15,3 +15,7 @@ add2(4)(8);
 
 var add7 = add2(7);
 add7(9);
+
+var add8 = add2(8);
+add8(10);
+add7(12);
