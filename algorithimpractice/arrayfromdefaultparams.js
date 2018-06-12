@@ -10,3 +10,5 @@ function defailtPs(a = 1, b = 6) { //if parameter blank, default params
 
 //arguments keyword arraylike object of all the objects when function get called
 defailtPs(4,6,3,4,5,6,5,2,1)
+
+//Array.from makes array
