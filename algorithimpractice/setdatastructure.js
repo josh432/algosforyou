@@ -32,6 +32,7 @@ MySet.prototype.remove = function (x) {
 
 MySet.prototype.values = function (x) {
     return this.collection;
+
 }
 
 MySet.prototype.clearAll = function (x) {
