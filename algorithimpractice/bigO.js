@@ -21,6 +21,8 @@ var quadraticExample = function(arr) {
     arr.map(num => num + arr.reduce((a,b) => a + b))
 }
 
+
+
 var orange = Array(1000).fill(1);
 console.time('a')
 quadraticExample(orange)

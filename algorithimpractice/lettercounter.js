@@ -22,4 +22,3 @@ var letterCounter = function(string, target){
     }
     return result;
 }
-
