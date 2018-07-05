@@ -48,6 +48,8 @@ kale.sold();
 var tomatoe = new Vegetables("Venezuela", false, 1, 1000);
 tomatoe.hasRipened();
 
+//everytime create new veggie, has properties for me, can have a lot of functions tied to it.
+
 
 
 
