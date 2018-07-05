@@ -11,4 +11,4 @@ var apple = function(a, b) {
 }
 apple()();
 apple()();
-//happy = 2 each time. doesn't increment
+//happy = 2 each time. doesn't increment each time call apple, it is a brand new function.
