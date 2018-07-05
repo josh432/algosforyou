@@ -40,7 +40,14 @@ Vegetables.prototype.sold = function() {
     this.stock--;
 }
 
+Vegetables.prototype.hasRipened = function() {
+    this.ripe = true;
+}
+
 kale.sold();
+var tomatoe = new Vegetables("Venezuela", false, 1, 1000);
+tomatoe.hasRipened();
+
 
 
 
