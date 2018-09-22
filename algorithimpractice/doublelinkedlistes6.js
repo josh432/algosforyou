@@ -1,17 +1,18 @@
 function Node(data) {
-    this.data = data;
-    this.previous = null;
-    this.next = null;
-  }
-  
-  function DoublyLinkedList() {
+  this.data = data;
+  this.previous = null;
+  this.next = null;
+}
+
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.numberOfValues = 0;
   }
-  
-  DoublyLinkedList.prototype.add = function (data) {
-    var node = new Node(data);
+
+  add(data) {
+    const node = new Node(data);
     if(!this.head) {
       this.head = node;
       this.tail = node;
@@ -21,9 +22,10 @@ function Node(data) {
       this.tail = node;
     }
     this.numberOfValues++;
-  };
-  DoublyLinkedList.prototype.remove = function(data) {
-    var current = this.head;
+  }
+
+  remove(data) {
+    let current = this.head;
     while(current) {
       if(current.data === data) {
         if(current === this.head && current === this.tail) {
@@ -43,12 +45,13 @@ function Node(data) {
       }
       current = current.next;
     }
-  };
-  DoublyLinkedList.prototype.insertAfter = function(data, toNodeData) {
-    var current = this.head;
+  }
+
+  insertAfter(data, toNodeData) {
+    let current = this.head;
     while(current) {
       if(current.data === toNodeData) {
-        var node = new Node(data);
+        const node = new Node(data);
         if(current === this.tail) {
           this.add(data);
         } else {
@@ -61,39 +64,45 @@ function Node(data) {
       }
       current = current.next;
     }
-  };
-  DoublyLinkedList.prototype.traverse = function(fn) {
-    var current = this.head;
+  }
+
+  traverse(fn) {
+    let current = this.head;
     while(current) {
       if(fn) {
         fn(current);
       }
       current = current.next;
     }
-  };
-  DoublyLinkedList.prototype.traverseReverse = function(fn) {
-    var current = this.tail;
+  }
+
+  traverseReverse(fn) {
+    let current = this.tail;
     while(current) {
       if(fn) {
         fn(current);
       }
       current = current.previous;
     }
-  };
-  DoublyLinkedList.prototype.length = function() {
+  }
+
+  length() {
     return this.numberOfValues;
-  };
-  DoublyLinkedList.prototype.print = function() {
-    var string = '';
-    var current = this.head;
+  }
+
+  print() {
+    let string = '';
+    let current = this.head;
     while(current) {
-      string += current.data + ' ';
+      string += `${current.data} `;
       current = current.next;
     }
     console.log(string.trim());
-  };
+  }
+}
 
-//   doublyLinkedList.print(); // => ''
+// const doublyLinkedList = new DoublyLinkedList();
+// doublyLinkedList.print(); // => ''
 // doublyLinkedList.add(1);
 // doublyLinkedList.add(2);
 // doublyLinkedList.add(3);
@@ -117,7 +126,7 @@ function Node(data) {
 // doublyLinkedList.print(); // => 2 6
 // doublyLinkedList.insertAfter(3, 2);
 // doublyLinkedList.print(); // => 2 3 6
-// doublyLinkedList.traverseReverse(function(node) { console.log(node.data); });
+// doublyLinkedList.traverseReverse(node => { console.log(node.data); });
 // doublyLinkedList.insertAfter(4, 3);
 // doublyLinkedList.print(); // => 2 3 4 6
 // doublyLinkedList.insertAfter(5, 9); // insertAfter a non existing node
@@ -128,11 +137,10 @@ function Node(data) {
 // doublyLinkedList.add(8); // add node with normal method
 // doublyLinkedList.print(); // => 2 3 4 5 6 7 8
 // console.log('length is 7:', doublyLinkedList.length()); // => 7
-// doublyLinkedList.traverse(function(node) { node.data = node.data + 10; });
+// doublyLinkedList.traverse(node => { node.data = node.data + 10; });
 // doublyLinkedList.print(); // => 12 13 14 15 16 17 18
-// doublyLinkedList.traverse(function(node) { console.log(node.data); }); // => 12 13 14 15 16 17 18
+// doublyLinkedList.traverse(node => { console.log(node.data); }); // => 12 13 14 15 16 17 18
 // console.log('length is 7:', doublyLinkedList.length()); // => 7
-// doublyLinkedList.traverseReverse(function(node) { console.log(node.data); }); // => 18 17 16 15 14 13 12
+// doublyLinkedList.traverseReverse(node => { console.log(node.data); }); // => 18 17 16 15 14 13 12
 // doublyLinkedList.print(); // => 12 13 14 15 16 17 18
 // console.log('length is 7:', doublyLinkedList.length()); // => 7
-
