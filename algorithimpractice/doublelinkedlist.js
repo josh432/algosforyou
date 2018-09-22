@@ -93,6 +93,8 @@ function Node(data) {
     console.log(string.trim());
   };
 
+
+var doublyLinkedList = new DoublyLinkedList();
 //   doublyLinkedList.print(); // => ''
 // doublyLinkedList.add(1);
 // doublyLinkedList.add(2);
