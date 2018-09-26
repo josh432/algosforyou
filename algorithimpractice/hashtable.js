@@ -59,7 +59,7 @@ var hash = (string, max) => {
  			}
  		}
  	};
- console.log(has('josh', 10));
+ console.log(hash('josh', 10));
 
  let ht = new HashTable();
  ht.add('josh', 'dad');
