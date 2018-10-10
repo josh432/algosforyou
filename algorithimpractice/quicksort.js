@@ -3,10 +3,10 @@
 
 //return new array with numbers sorted. doesn't destroy old array.
 //pivot last item in array
-[5, 1, 6, 4, 2, 6, 8, 5]
-pivot = 5
-left = 1, 4, 2 (less than pivot)
-right = 5, 6, 6, 8(greater than pivot)
+// [5, 1, 6, 4, 2, 6, 8, 5]
+// pivot = 5
+// left = 1, 4, 2 (less than pivot)
+// right = 5, 6, 6, 8(greater than pivot)
 
 return [left, pivot, right]
 
